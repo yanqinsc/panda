@@ -2,6 +2,13 @@
     height: 110px;
 }
 
+.navbar-collapse {
+    background-color: #fff;
+    z-index: 99;
+}
+
+
+
 .border-buttom {
     border-bottom: 1px solid #dee2e6!important;
 }
@@ -12,9 +19,21 @@
 
 .main {
     margin-top: 50px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .sidebar {
     background-color: #f8f8f8;
+}
+
+@media screen and (min-width: 1200px){
+    .nav-item {
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .nav-item {
+        border-bottom: 1px solid #dee2e6!important;
+    }
 }

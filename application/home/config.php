@@ -5,6 +5,7 @@ return [
     'view_replace_str' => [
         '__ROOT__' => '/',
         '__PUBLIC__' => '/public/',
-        '__CSS__' => '/public/static/home/css/'
+        '__CSS__' => '/public/static/home/css/',
+        '__JS__' => '/public/static/home/js/'
     ],
 ];
