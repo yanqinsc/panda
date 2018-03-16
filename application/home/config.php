@@ -3,6 +3,8 @@
 return [
     'site_name' => 'Panda',
     'view_replace_str' => [
-        '__CSS__' => '/static/home/'
+        '__ROOT__' => '/',
+        '__PUBLIC__' => '/public/',
+        '__CSS__' => '/public/static/home/'
     ],
 ];
