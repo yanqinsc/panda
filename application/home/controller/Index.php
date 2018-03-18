@@ -14,6 +14,5 @@ class Index extends Controller
     public function index(Request $request)
     {
         return view('index');
-
     }
 }
