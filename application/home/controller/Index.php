@@ -2,9 +2,8 @@
 namespace app\home\controller;
 
 use think\Request;
-use think\Controller;
 
-class Index extends Controller
+class Index extends Base
 {
     /**
      * 首页

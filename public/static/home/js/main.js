@@ -1,5 +1,5 @@
-$(function () {
-    $(".nav-item").click(function () {
-        alert(3);
-    });
+$(document).ready(function(){
+    var categoryId = $("input[name=category]").val();
+    $(".nav-link").removeClass("active");
+    $("#" + categoryId).addClass("active");
 });
