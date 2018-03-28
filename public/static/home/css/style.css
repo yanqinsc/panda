@@ -2,6 +2,9 @@ body {
     background-color: #f8f8f8;
 }
 
+.border-buttom {
+    border-bottom: 1px solid lightgrey;
+}
 .navbar {
     height: 110px;
 }
@@ -138,8 +141,13 @@ footer p {
     .nav-item {
         margin-left: 50px;
     }
+
     .container {
         max-width: 1200px;
+    }
+
+    #search {
+        margin-right: 20%;
     }
 }
 

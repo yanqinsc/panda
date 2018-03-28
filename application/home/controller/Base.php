@@ -18,6 +18,6 @@ class Base extends Controller
     public function __construct(Request $request = null)
     {
         parent::__construct($request);
-        $this->assign('category', Category::field('name,abbreviation')->select());
+        $this->assign('category', Category::getAll());
     }
 }

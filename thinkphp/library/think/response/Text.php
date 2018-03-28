@@ -18,7 +18,7 @@ class Text extends Response
     protected $contentType = 'text';
 
     /**
-     * 处理数据
+     * 原样输出文本数据
      * @access protected
      * @param mixed $data 要处理的数据
      * @return mixed

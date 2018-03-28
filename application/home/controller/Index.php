@@ -2,17 +2,32 @@
 
 namespace app\home\controller;
 
+use app\home\model\Article;
+use app\home\model\Category;
+
 class Index extends Base
 {
     /**
      * 目录页
-     * @param $category
+     * @param string $category
      * @return \think\response\View
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
      */
     public function contents($category = 'home')
     {
-        $this->assign('nav_item', $category);
-        return view('index');
+
+        // 读取文章信息
+        $category_id = Category::getInfoByAbbreviation($category, 'id')->id;
+        $contents = Article::getListByCategory($category_id, 10);
+
+        $this->assign([
+            'nav_item' => $category,
+            'contents' => $contents,
+        ]);
+
+        return view('contents');
     }
 
     /**
@@ -22,6 +37,7 @@ class Index extends Base
      */
     public function article($id)
     {
+        echo $id;
         return view('article');
     }
 }

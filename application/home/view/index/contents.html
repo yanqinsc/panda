@@ -1,0 +1,23 @@
+{extend name="common/base" /}
+{block name="main"}
+<div>
+    {foreach $contents as $article}
+    <section class="list-item">
+        {if empty($article.thumb)}
+        <div class="title-picture"><i>1</i></div>
+        {else/}
+        <img src="{$article.thumb}" alt="{$article.title}" class="title-picture">
+        {/if}
+        <div class="title-text">
+            <p class="title"><a href="{:url('index/article', ['id' => $article.id])}">{$article.title}
+                (作者：{$article.author})</a></p>
+            <span>{:substr($article.add_time, 0, 10)} - {$article.category} - 阅 {$article.views}</span>
+            <p class="describe">
+                {$article.summary}
+            </p>
+        </div>
+    </section>
+    {/foreach}
+</div>
+<input type="hidden" name="category" value="{$nav_item}">
+{/block}
