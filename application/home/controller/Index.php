@@ -1,4 +1,5 @@
 <?php
+
 namespace app\home\controller;
 
 class Index extends Base
@@ -8,7 +9,7 @@ class Index extends Base
      * @param $category
      * @return \think\response\View
      */
-    public function contents($category='home')
+    public function contents($category = 'home')
     {
         $this->assign('nav_item', $category);
         return view('index');
