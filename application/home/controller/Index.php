@@ -4,16 +4,18 @@ namespace app\home\controller;
 class Index extends Base
 {
     /**
-     * 首页
-     * @return mixed
+     * 目录页
+     * @param $category
+     * @return \think\response\View
      */
-    public function index()
+    public function contents($category='home')
     {
+        $this->assign('nav_item', $category);
         return view('index');
     }
 
     /**
-     * 文章展示页
+     * 内容页
      * @param $id
      * @return \think\response\View
      */
