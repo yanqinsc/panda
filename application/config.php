@@ -29,7 +29,7 @@ return [
     // 扩展函数文件
     'extra_file_list'        => [THINK_PATH . 'helper' . EXT],
     // 默认输出类型
-    'default_return_type'    => 'text',
+    'default_return_type'    => 'html',
     // 默认AJAX 数据返回格式,可选json xml ...
     'default_ajax_return'    => 'json',
     // 默认JSONP格式返回的处理方法
@@ -54,13 +54,13 @@ return [
     // +----------------------------------------------------------------------
 
     // 默认模块名
-    'default_module'         => 'wechat',
+    'default_module'         => 'home',
     // 禁止访问模块
     'deny_module_list'       => ['common'],
     // 默认控制器名
     'default_controller'     => 'Index',
     // 默认操作名
-    'default_action'         => 'index',
+    'default_action'         => 'contents',
     // 默认验证器
     'default_validate'       => '',
     // 默认的空控制器名
