@@ -30,15 +30,19 @@ class Index extends Base
         return view('contents');
     }
 
+
     /**
-     * 内容页
+     * 文章内容页
      * @param $id
      * @return \think\response\View
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
      */
     public function article($id)
     {
-        // $article = Article::getArticle($id);
-        $article = '';
+        $article = Article::getArticle($id);
+
         $this->assign([
             'article' => $article
         ]);

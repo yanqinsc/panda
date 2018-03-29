@@ -9,6 +9,7 @@
 namespace app\home\controller;
 
 
+use app\home\model\Article;
 use app\home\model\Category;
 use think\Controller;
 use think\Request;
@@ -18,6 +19,9 @@ class Base extends Controller
     public function __construct(Request $request = null)
     {
         parent::__construct($request);
-        $this->assign('category', Category::getAll());
+        $this->assign([
+            'category' => Category::getAll(),
+            'hot_list' => Article::getHotList()
+        ]);
     }
 }

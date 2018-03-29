@@ -47,13 +47,19 @@ class Article extends Model
      * @throws \think\db\exception\ModelNotFoundException
      * @throws \think\exception\DbException
      */
-//    public static function getArticle($id)
-//    {
-//        return self::alias('a')
-//            ->join('category c', 'a.category_id=c.id', 'left')
-//            ->join('article_body b', 'a.body_id=b.id', 'left')
-//            ->where(['a.id' => $id])
-//            ->field(['a.id', 'a.title', 'a.thumb', 'a.author', 'a.summary', 'a.views', 'b.body', 'a.add_time', 'c.name' => 'category'])
-//            ->find();
-//    }
+    public static function getArticle($id)
+    {
+        return self::alias('a')
+            ->join('category c', 'a.category_id=c.id', 'left')
+            ->join('article_body b', 'a.id=b.aid', 'left')
+            ->where(['a.id' => $id])
+            ->field(['a.id', 'a.title', 'a.thumb', 'a.author', 'a.summary', 'a.views', 'a.comments', 'b.body', 'a.add_time', 'c.name' => 'category'])
+            ->find();
+    }
+
+
+    public static function getHotList()
+    {
+        return self::field(['id', 'title'])->order(['comments' => 'desc', 'views' => 'desc'])->limit(6)->select();
+    }
 }

@@ -13,15 +13,15 @@
 .article-title {
     float: left;
     width: 100%;
-    height: 5em;
+    height: 5.5em;
     margin-top: 2em;
     margin-left: -18px;
     border-left: 3px solid #99dd00;
-    background-color: #f8f8f8;
+    background-color: #f7f7f7;
 }
 
 #title-text {
-    margin-top: 8px;
+    margin-top: 15px;
     float: left;
     margin-left: 30px;
 }
@@ -37,11 +37,24 @@
     color: #666;
 }
 
+#title-text p i {
+    color: #99dd00;
+    font-size: 16px;
+}
+
 #comment-number {
     float: left;
     color: #ec9573 !important;
     margin-left: 30px;
-    margin-top: -30px;
-    font-size: 5.5em;
+    margin-top: -22px;
+    font-size: 5.1em;
     font-weight: 600;
+}
+
+.article-body {
+    float: left;
+    width: 93.5%;
+    margin-left: 30px;
+    margin-top: 30px;
+    height: 90%;
 }

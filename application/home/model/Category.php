@@ -20,7 +20,7 @@ class Category extends Model
      */
     public static function getAll()
     {
-        return self::all();
+        return self::where(['is_nav' => '1'])->select();
     }
 
     /**
