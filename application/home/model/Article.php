@@ -32,10 +32,28 @@ class Article extends Model
         } else {
             return self::alias('a')
                 ->join('category c', 'a.category_id=c.id', 'left')
-                ->where(['category_id' => $category_id])
+                ->where(['a.category_id' => $category_id])
                 ->field(['a.id', 'a.title', 'a.thumb', 'a.author', 'a.summary', 'a.views', 'a.add_time', 'c.name' => 'category'])
                 ->order('a.id desc')
                 ->paginate($paginate_number);
         }
     }
+
+    /**
+     * 根据文章ID获取文章信息
+     * @param $id
+     * @return array|false|\PDOStatement|string|Model
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
+     */
+//    public static function getArticle($id)
+//    {
+//        return self::alias('a')
+//            ->join('category c', 'a.category_id=c.id', 'left')
+//            ->join('article_body b', 'a.body_id=b.id', 'left')
+//            ->where(['a.id' => $id])
+//            ->field(['a.id', 'a.title', 'a.thumb', 'a.author', 'a.summary', 'a.views', 'b.body', 'a.add_time', 'c.name' => 'category'])
+//            ->find();
+//    }
 }

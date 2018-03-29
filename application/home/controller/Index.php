@@ -24,7 +24,7 @@ class Index extends Base
 
         $this->assign([
             'nav_item' => $category,
-            'contents' => $contents,
+            'contents' => $contents
         ]);
 
         return view('contents');
@@ -37,7 +37,11 @@ class Index extends Base
      */
     public function article($id)
     {
-        echo $id;
+        // $article = Article::getArticle($id);
+        $article = '';
+        $this->assign([
+            'article' => $article
+        ]);
         return view('article');
     }
 }

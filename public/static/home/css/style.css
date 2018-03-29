@@ -5,6 +5,7 @@ body {
 .border-buttom {
     border-bottom: 1px solid lightgrey;
 }
+
 .navbar {
     height: 110px;
 }
@@ -23,7 +24,7 @@ body {
 }
 
 .border-buttom {
-    border-bottom: 1px solid #dee2e6!important;
+    border-bottom: 1px solid #dee2e6 !important;
 }
 
 .bg-light {
@@ -31,7 +32,7 @@ body {
 }
 
 .main {
-    min-height:80vh;
+    min-height: 80vh;
     margin-top: 20px;
     margin-bottom: 30px;
     padding-bottom: 30px;
@@ -135,9 +136,7 @@ footer p {
     text-align: center;
 }
 
-
-
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1200px) {
     .nav-item {
         margin-left: 50px;
     }
@@ -151,7 +150,7 @@ footer p {
     }
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
     .abstract {
         padding-right: 50px;
     }
@@ -163,7 +162,6 @@ footer p {
     .list-item {
         font-size: 10px;
     }
-
 
     .title-text {
         margin-right: 4em;
